@@ -1,1 +1,2 @@
 *.js linguist-vendored
+styles/generated.css linguist-vendored
