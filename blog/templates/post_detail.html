@@ -1,0 +1,15 @@
+{% load static %}
+<head>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    
+</head>
+
+
+<h1>{{ post.title }}</h1>
+<p>By {{ post.author }} on {{ post.created_at }}</p>
+<div>{{ post.content|linebreaks }}</div>
+
+{% if user == post.author %}
+    <a href="{% url 'post_edit' slug=post.slug %}">Edit</a>
+    <a href="{% url 'post_delete' slug=post.slug %}">Delete</a>
+{% endif %}

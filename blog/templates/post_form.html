@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% if object %}Edit{% else %}Create{% endif %} Blog Post</title>
+    <link rel="stylesheet" href="{% static 'login.css' %}">
+</head>
+<body>
+    <div class="center-message">
+        <div class="glass-box">
+            <h2>{% if object %}Edit{% else %}Create{% endif %} Blog Post</h2>
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">Save</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

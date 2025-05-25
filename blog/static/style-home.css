@@ -1,0 +1,97 @@
+/* Background gradient */
+body {
+    background-image: url('images/background image 5.jpg');
+    background-size: cover;        
+    background-position: center;   
+    background-repeat: no-repeat;  
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+
+}
+
+/* Top-right section */
+.top-right {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 16px;
+}
+
+/* Auth links */
+.auth-link {
+    text-decoration: none;
+    margin: 0 8px;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.auth-link:hover {
+    text-decoration: underline;
+}
+
+/* Logout button styled like a link */
+.link-button {
+    background: none;
+    border: none;
+    color: #2c3e50;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0;
+}
+
+.link-button:hover {
+    text-decoration: underline;
+}
+
+/* Center message */
+.center-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.center-message h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #34495e;
+}
+
+.subheading {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #555;
+    font-style: italic;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #2980b9;
+}
+
+.glass-box {
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(24, 0, 0, 0.2);
+    display: inline-block;
+}
+
+
+
+

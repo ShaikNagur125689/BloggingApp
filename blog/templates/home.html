@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{% static 'style-home.css' %}">
+    <title>Home - Blog</title>
+
+
+
+</head>
+<body>
+    <div class="top-right">
+        {% if user.is_authenticated %}
+            <span>Welcome, {{ user.username }}!</span>
+            <form action="{% url 'logout' %}" method="post" style="display:inline;">
+                {% csrf_token %}
+                <button type="submit" class="link-button">Logout</button>
+            </form>
+        {% else %}
+            <a href="{% url 'login' %}" class="auth-link">Login</a> |
+            <a href="{% url 'signup' %}" class="auth-link">Sign Up</a>
+        {% endif %}
+    </div>
+
+<div class="center-message">
+    <div class="glass-box">
+        <h1>Welcome to Blogging</h1>
+        <p class="subheading"><b>Your thoughts, Your words, Your space.</b></p>
+        <a href="{% url 'login' %}" class="cta-button">Start Blogging</a>
+    </div>
+</div>
+</body>
+</html>
